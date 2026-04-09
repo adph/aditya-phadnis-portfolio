@@ -825,7 +825,7 @@ section {
 /* ── EDUCATION ── */
 #education { background: rgba(242, 237, 224, 0.58); }
 
-.edu-cards { display: flex; flex-direction: column; gap: 0; }
+.edu-cards { display: flex; flex-direction: column; gap: 1.25rem; }
 
 .edu-card {
   border: 1px solid rgba(0,0,0,0.08);
