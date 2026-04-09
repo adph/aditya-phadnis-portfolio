@@ -350,7 +350,7 @@ nav.nav-visible { transform: translateY(0); }
 .hero-label {
   font-family: 'Syncopate', sans-serif;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--black);
@@ -429,7 +429,7 @@ nav.nav-visible { transform: translateY(0); }
   text-decoration: none;
   font-family: 'Syncopate', sans-serif;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   transition: background 0.15s, color 0.15s, transform 0.15s;
@@ -446,7 +446,7 @@ nav.nav-visible { transform: translateY(0); }
   text-decoration: none;
   font-family: 'Syncopate', sans-serif;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   backdrop-filter: blur(20px) saturate(160%);
@@ -468,7 +468,7 @@ section {
 .section-label {
   font-family: 'Syncopate', sans-serif;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--muted);
@@ -528,7 +528,7 @@ section {
 .aside-label {
   font-family: 'Syncopate', sans-serif;
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--muted);
@@ -578,7 +578,7 @@ section {
 .skill-title {
   font-family: 'Syncopate', sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 0.5rem;
   letter-spacing: -0.01em;
 }
@@ -656,7 +656,7 @@ section {
   color: var(--black);
   font-size: 0.72rem;
   font-family: 'Syncopate', sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   padding: 0.25rem 0.75rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -719,7 +719,7 @@ section {
 .timeline-dates {
   font-family: 'Syncopate', sans-serif;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--black);
@@ -761,7 +761,7 @@ section {
   position: absolute;
   left: 0;
   color: var(--black);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 /* ── EDUCATION ── */
@@ -811,7 +811,7 @@ section {
 .edu-dates {
   font-family: 'Syncopate', sans-serif;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border: var(--border);
@@ -878,7 +878,7 @@ section {
   font-size: 0.75rem;
   margin-left: auto;
   font-family: 'Syncopate', sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.15s;
 }
