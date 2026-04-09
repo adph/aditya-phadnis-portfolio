@@ -16,13 +16,17 @@
   --radius: 14px 0 14px 0;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   font-family: 'DM Sans', -apple-system, sans-serif;
   background: var(--white);
   color: var(--black);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* ── MESH BACKGROUND ── */
@@ -52,7 +56,7 @@ body {
   width: 550px; height: 550px;
   background: radial-gradient(circle, rgba(246, 105, 69, 0.40) 0%, rgba(255, 180, 80, 0.22) 50%, transparent 70%);
   filter: blur(55px);
-  bottom: 5%; right: -120px;
+  bottom: 5%; right: -60px;
   animation: orbFloat2 30s ease-in-out infinite;
 }
 
@@ -248,8 +252,8 @@ nav {
 nav.nav-visible { transform: translateY(0); }
 
 .nav-name {
-  font-family: 'Syncopate', sans-serif;
-  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   color: var(--black);
   letter-spacing: -0.02em;
@@ -257,8 +261,8 @@ nav.nav-visible { transform: translateY(0); }
 }
 
 .nav-logo {
-  font-family: 'Syncopate', sans-serif;
-  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   font-size: 1.2rem;
   color: var(--black);
   text-decoration: none;
@@ -344,7 +348,7 @@ nav.nav-visible { transform: translateY(0); }
 .hero-card .status-dot { background: var(--yellow); }
 
 .hero-label {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -365,9 +369,9 @@ nav.nav-visible { transform: translateY(0); }
 }
 
 .hero-name {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(3.5rem, 8vw, 6.5rem);
-  font-weight: 800;
+  font-weight: 300;
   letter-spacing: -0.03em;
   line-height: 0.95;
   color: var(--black);
@@ -375,9 +379,9 @@ nav.nav-visible { transform: translateY(0); }
 }
 
 .hero-title {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.4rem, 3vw, 2.2rem);
-  font-weight: 700;
+  font-weight: 300;
   color: var(--black);
   letter-spacing: -0.03em;
   margin-bottom: 1.5rem;
@@ -423,7 +427,7 @@ nav.nav-visible { transform: translateY(0); }
   border: var(--border);
   border-radius: var(--radius);
   text-decoration: none;
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -440,7 +444,7 @@ nav.nav-visible { transform: translateY(0); }
   border: var(--border);
   border-radius: var(--radius);
   text-decoration: none;
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -459,7 +463,7 @@ section {
 .container { max-width: 1100px; margin: 0 auto; padding: 90px 2.5rem; }
 
 .section-label {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -479,9 +483,9 @@ section {
 }
 
 .section-title {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(2rem, 4.5vw, 3.5rem);
-  font-weight: 800;
+  font-weight: 300;
   letter-spacing: -0.03em;
   line-height: 1;
   margin-bottom: 3rem;
@@ -519,7 +523,7 @@ section {
 .aside-card:last-child { border-bottom: var(--border); }
 
 .aside-label {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -569,7 +573,7 @@ section {
 .skill-icon svg { width: 32px; height: 32px; stroke-width: 1.5; }
 
 .skill-title {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -615,7 +619,7 @@ section {
 .project-main {}
 
 .project-title {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -629,7 +633,7 @@ section {
   margin-bottom: 0.75rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .project-desc {
@@ -648,7 +652,7 @@ section {
   background: transparent;
   color: var(--black);
   font-size: 0.72rem;
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   padding: 0.25rem 0.75rem;
   letter-spacing: 0.06em;
@@ -656,7 +660,7 @@ section {
 }
 
 .project-number {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 3rem;
   font-weight: 800;
   color: var(--black);
@@ -695,7 +699,7 @@ section {
 .timeline-left {}
 
 .timeline-role {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 800;
   letter-spacing: -0.01em;
@@ -710,7 +714,7 @@ section {
 }
 
 .timeline-dates {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -788,7 +792,7 @@ section {
 }
 
 .edu-degree {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: -0.01em;
@@ -802,7 +806,7 @@ section {
 }
 
 .edu-dates {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -870,7 +874,7 @@ section {
   cursor: pointer;
   font-size: 0.75rem;
   margin-left: auto;
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   letter-spacing: 0.05em;
   transition: color 0.15s;
@@ -892,7 +896,7 @@ footer {
 }
 
 footer .footer-logo {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   color: var(--yellow);
   font-size: 1rem;
@@ -900,19 +904,51 @@ footer .footer-logo {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
+  /* Nav */
   nav { padding: 0 1.25rem; }
   .nav-links { display: none; }
+
+  /* Hero */
   #hero {
     grid-template-columns: 1fr;
-    padding: 90px 1.25rem 50px;
-    min-height: auto;
+    padding: 80px 1.25rem 40px;
+    min-height: 100svh;
   }
-  .container { padding: 70px 1.25rem; }
-  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .timeline-item { grid-template-columns: 1fr; gap: 1rem; }
-  .project-card { grid-template-columns: 1fr; }
+  .hero-card { padding: 1.75rem; margin-bottom: 1.5rem; }
+  .hero-name { font-size: clamp(2.8rem, 12vw, 4rem); }
+  .hero-title { font-size: clamp(1.1rem, 5vw, 1.5rem); }
+  .hero-actions { flex-direction: column; gap: 0.6rem; }
+  .btn-primary, .btn-outline { text-align: center; width: 100%; }
+
+  /* Sections */
+  .container { padding: 60px 1.25rem; }
+  .section-title { font-size: clamp(1.8rem, 8vw, 2.5rem); margin-bottom: 2rem; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr; }
+
+  /* Projects */
+  .project-card { grid-template-columns: 1fr; padding: 1.5rem; }
   .project-number { display: none; }
-  .edu-card { flex-direction: column; align-items: flex-start; }
-  .hero-actions { flex-direction: column; }
-  .btn-primary, .btn-outline { text-align: center; }
+  .project-title { font-size: 1.1rem; }
+
+  /* Experience */
+  .timeline-item { grid-template-columns: 1fr; gap: 0.75rem; padding: 1.5rem; }
+  .timeline-role { font-size: 0.95rem; }
+
+  /* Education */
+  .edu-card { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1.25rem 1.5rem; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; }
+
+  /* Footer */
+  footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+
+  /* Disable heavy blur on mobile for performance */
+  .mesh-orb { filter: blur(40px) !important; }
+  .cursor-glow { display: none; }
 }
