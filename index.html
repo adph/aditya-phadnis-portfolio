@@ -27,6 +27,31 @@
 <!-- CURSOR GLOW -->
 <div class="cursor-glow" aria-hidden="true"></div>
 
+<!-- SCROLL NAV -->
+<div class="scroll-nav" aria-label="Section navigation">
+  <a href="#hero" class="scroll-nav-item active" data-label="Home">
+    <span class="scroll-nav-dot"></span>
+  </a>
+  <a href="#about" class="scroll-nav-item" data-label="About">
+    <span class="scroll-nav-dot"></span>
+  </a>
+  <a href="#skills" class="scroll-nav-item" data-label="Skills">
+    <span class="scroll-nav-dot"></span>
+  </a>
+  <a href="#projects" class="scroll-nav-item" data-label="Projects">
+    <span class="scroll-nav-dot"></span>
+  </a>
+  <a href="#experience" class="scroll-nav-item" data-label="Experience">
+    <span class="scroll-nav-dot"></span>
+  </a>
+  <a href="#education" class="scroll-nav-item" data-label="Education">
+    <span class="scroll-nav-dot"></span>
+  </a>
+  <a href="#contact" class="scroll-nav-item" data-label="Contact">
+    <span class="scroll-nav-dot"></span>
+  </a>
+</div>
+
 <!-- NAV -->
 <nav>
   <a href="#hero" class="nav-name">Aditya Phadnis</a>
@@ -40,21 +65,25 @@
 </nav>
 
 <!-- HERO -->
-<section id="hero" style="border-bottom:var(--border); display:block; min-height:100vh; background:var(--gradient); padding:100px 2.5rem 60px; max-width:100%; margin:0; box-shadow: inset 0 -60px 80px rgba(0,0,0,0.15);">
+<section id="hero" style="border-bottom:var(--border); display:block; background:var(--gradient); padding:60px 2.5rem 40px; max-width:100%; margin:0; box-shadow: inset 0 -60px 80px rgba(0,0,0,0.15); position:relative; overflow:hidden;">
   <div class="hero-content">
     <div class="hero-card">
-      <h1 class="hero-name">Aditya<br>Phadnis</h1>
-      <div class="hero-title">AI &amp; Data Engineer</div>
-      <p class="hero-tagline">Building LLM agents, cloud data pipelines &amp; observability platforms.</p>
-      <p class="hero-status">
-        <span class="status-dot"></span>
-        MS Informatics · Penn State · Open to full-time from Summer 2026
-      </p>
-    </div>
-    <div class="hero-actions">
-      <a href="#projects" class="btn-outline">View My Work</a>
-      <a href="#experience" class="btn-outline">Work Experience</a>
-      <a href="#contact" class="btn-outline">Get In Touch</a>
+      <div class="hero-left">
+        <h1 class="hero-name">Aditya<br>Phadnis</h1>
+        <div class="hero-title">AI &amp; Data Engineer</div>
+      </div>
+      <div class="hero-right">
+        <p class="hero-tagline">Building LLM agents, cloud data pipelines &amp; observability platforms.</p>
+        <p class="hero-status">
+          <span class="status-dot"></span>
+          MS Informatics · Penn State · Open to full-time from Summer 2026
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-outline">View My Work</a>
+          <a href="#experience" class="btn-outline">Work Experience</a>
+          <a href="#contact" class="btn-outline">Get In Touch</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -65,23 +94,28 @@
   <div class="container">
     <div class="section-label reveal">About · 01</div>
     <h2 class="section-title reveal">Who I Am</h2>
+    <!-- Top row: text left, photo right -->
     <div class="about-grid">
       <div class="about-body reveal">
         <p>I'm an AI &amp; Data Engineer with 2.5+ years of industry experience across the full data and AI stack — from architecting enterprise data warehouses to shipping production LLM-powered agentic tools.</p>
       </div>
-      <div class="about-aside stagger">
-        <div class="aside-card">
-          <div class="aside-label">Current Status</div>
-          <div class="aside-value">MS Informatics (Data Science)<br>Penn State University</div>
-        </div>
-        <div class="aside-card">
-          <div class="aside-label">Looking For</div>
-          <div class="aside-value">Full-time AI / Data Engineering<br>Available from Summer 2026</div>
-        </div>
-        <div class="aside-card">
-          <div class="aside-label">Location</div>
-          <div class="aside-value">State College, PA<br>Open to relocation</div>
-        </div>
+      <div class="about-profile reveal">
+        <img src="images/profile.jpg?v=2" alt="Aditya Phadnis" class="profile-photo" />
+      </div>
+    </div>
+    <!-- Bottom row: info cards horizontal -->
+    <div class="about-cards stagger">
+      <div class="aside-card">
+        <div class="aside-label">Current Status</div>
+        <div class="aside-value">MS Informatics (Data Science)<br>Penn State University</div>
+      </div>
+      <div class="aside-card">
+        <div class="aside-label">Looking For</div>
+        <div class="aside-value">Full-time AI / Data Engineering<br>Available from Summer 2026</div>
+      </div>
+      <div class="aside-card">
+        <div class="aside-label">Location</div>
+        <div class="aside-value">State College, PA<br>Open to relocation</div>
       </div>
     </div>
   </div>
@@ -355,10 +389,7 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <span>© 2026 Aditya Phadnis · Built with vanilla HTML/CSS/JS</span>
-</footer>
+
 
 <script src="js/main.js"></script>
 </body>

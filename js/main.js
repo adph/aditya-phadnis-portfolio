@@ -8,8 +8,11 @@ document.addEventListener('mousemove', (e) => {
   cursorGlow.style.top  = e.clientY + 'px';
 });
 
-// ── CARD PARALLAX TILT ──
-const tiltCards = document.querySelectorAll('.skill-card, .project-card, .edu-card');
+
+// ── CARD PARALLAX TILT (desktop only) ──
+const tiltCards = window.matchMedia('(hover: hover)').matches
+  ? document.querySelectorAll('.skill-card, .project-card, .edu-card')
+  : [];
 tiltCards.forEach(card => {
   card.addEventListener('mousemove', (e) => {
     const rect = card.getBoundingClientRect();
@@ -45,6 +48,36 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     }
   });
 });
+
+// ── SCROLL NAV ──
+(function() {
+  const sections = ['hero','about','skills','projects','experience','education','contact'];
+  const navItems = document.querySelectorAll('.scroll-nav-item');
+
+  function getActive() {
+    const mid = window.innerHeight * 0.5;
+    let active = sections[0];
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      const top = el.getBoundingClientRect().top;
+      if (top <= mid) active = id;
+    }
+    return active;
+  }
+
+  function updateScrollNav() {
+    const active = getActive();
+    navItems.forEach(item => {
+      const href = item.getAttribute('href').replace('#', '');
+      item.classList.toggle('active', href === active);
+    });
+    document.body.classList.toggle('on-hero', active === 'hero');
+  }
+
+  window.addEventListener('scroll', updateScrollNav, { passive: true });
+  updateScrollNav();
+})();
 
 // ── SCROLL ANIMATIONS ──
 const observer = new IntersectionObserver((entries) => {
