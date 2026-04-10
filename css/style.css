@@ -46,34 +46,34 @@ body {
 
 .mesh-orb-1 {
   width: 700px; height: 700px;
-  background: radial-gradient(circle, rgba(235, 51, 73, 0.45) 0%, rgba(246, 105, 69, 0.25) 50%, transparent 70%);
-  filter: blur(50px);
+  background: radial-gradient(circle, rgba(235, 51, 73, 0.30) 0%, rgba(246, 105, 69, 0.15) 50%, transparent 70%);
   top: -200px; left: -200px;
   animation: orbFloat1 24s ease-in-out infinite;
+  will-change: transform;
 }
 
 .mesh-orb-2 {
   width: 550px; height: 550px;
-  background: radial-gradient(circle, rgba(246, 105, 69, 0.40) 0%, rgba(255, 180, 80, 0.22) 50%, transparent 70%);
-  filter: blur(55px);
+  background: radial-gradient(circle, rgba(246, 105, 69, 0.25) 0%, rgba(255, 180, 80, 0.14) 50%, transparent 70%);
   bottom: 5%; right: -60px;
   animation: orbFloat2 30s ease-in-out infinite;
+  will-change: transform;
 }
 
 .mesh-orb-3 {
   width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(255, 240, 200, 0.50) 0%, rgba(255, 222, 133, 0.28) 50%, transparent 70%);
-  filter: blur(45px);
+  background: radial-gradient(circle, rgba(255, 240, 200, 0.35) 0%, rgba(255, 222, 133, 0.18) 50%, transparent 70%);
   top: 40%; left: 40%;
   animation: orbFloat3 20s ease-in-out infinite;
+  will-change: transform;
 }
 
 .mesh-orb-4 {
   width: 300px; height: 300px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.50) 0%, transparent 65%);
-  filter: blur(40px);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.35) 0%, transparent 65%);
   top: 20%; right: 15%;
   animation: orbFloat4 16s ease-in-out infinite;
+  will-change: transform;
 }
 
 /* Floating rings */
@@ -170,6 +170,8 @@ body {
 /* ── CURSOR GLOW ── */
 .cursor-glow {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 480px;
   height: 480px;
   border-radius: 50%;
@@ -177,8 +179,7 @@ body {
   pointer-events: none;
   z-index: 1;
   transform: translate(-50%, -50%);
-  transition: left 0.12s ease-out, top 0.12s ease-out;
-  mix-blend-mode: normal;
+  will-change: transform;
 }
 
 /* ── SCROLL ANIMATIONS ── */
@@ -626,7 +627,6 @@ section {
   box-shadow: var(--shadow-lg);
   position: relative;
   z-index: 1;
-  animation: idleFloat 2s ease-in-out infinite;
 }
 
 .skill-icon { margin-bottom: 0.75rem; }
@@ -674,7 +674,6 @@ section {
   box-shadow: var(--shadow-lg);
   position: relative;
   z-index: 1;
-  animation: idleFloat 2s ease-in-out infinite;
 }
 
 .project-main {}
@@ -850,7 +849,6 @@ section {
   box-shadow: var(--shadow-lg);
   position: relative;
   z-index: 1;
-  animation: idleFloat 2s ease-in-out infinite;
 }
 
 .edu-degree {

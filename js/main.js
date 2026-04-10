@@ -1,27 +1,41 @@
 // ── ICONS ──
 lucide.createIcons();
 
-// ── CURSOR GLOW ──
+// ── CURSOR GLOW (rAF-throttled, transform-based) ──
 const cursorGlow = document.querySelector('.cursor-glow');
+let glowRaf = false, glowX = 0, glowY = 0;
 document.addEventListener('mousemove', (e) => {
-  cursorGlow.style.left = e.clientX + 'px';
-  cursorGlow.style.top  = e.clientY + 'px';
+  glowX = e.clientX; glowY = e.clientY;
+  if (!glowRaf) {
+    glowRaf = true;
+    requestAnimationFrame(() => {
+      cursorGlow.style.transform = `translate(calc(${glowX}px - 50%), calc(${glowY}px - 50%))`;
+      glowRaf = false;
+    });
+  }
 });
 
 
-// ── CARD PARALLAX TILT (desktop only) ──
+// ── CARD PARALLAX TILT (desktop only, rAF-throttled) ──
 const tiltCards = window.matchMedia('(hover: hover)').matches
   ? document.querySelectorAll('.skill-card, .project-card, .edu-card')
   : [];
 tiltCards.forEach(card => {
+  let tiltRaf = null;
   card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width  - 0.5;
-    const y = (e.clientY - rect.top)  / rect.height - 0.5;
-    card.style.transform = `perspective(700px) rotateY(${x * 7}deg) rotateX(${-y * 7}deg) translateY(-6px) scale(1.01)`;
-    card.style.transition = 'background 0.2s, box-shadow 0.2s';
+    const cx = e.clientX, cy = e.clientY;
+    if (tiltRaf) return;
+    tiltRaf = requestAnimationFrame(() => {
+      const rect = card.getBoundingClientRect();
+      const x = (cx - rect.left) / rect.width  - 0.5;
+      const y = (cy - rect.top)  / rect.height - 0.5;
+      card.style.transform = `perspective(700px) rotateY(${x * 7}deg) rotateX(${-y * 7}deg) translateY(-6px) scale(1.01)`;
+      card.style.transition = 'background 0.2s, box-shadow 0.2s';
+      tiltRaf = null;
+    });
   });
   card.addEventListener('mouseleave', () => {
+    if (tiltRaf) { cancelAnimationFrame(tiltRaf); tiltRaf = null; }
     card.style.transform = '';
     card.style.transition = 'background 0.2s, box-shadow 0.2s, transform 0.5s cubic-bezier(0.22,1,0.36,1)';
   });
