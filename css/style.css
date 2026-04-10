@@ -965,8 +965,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  padding: 7px 0;
+  width: 36px;
+  padding: 10px 0;
   text-decoration: none;
   cursor: pointer;
 }
@@ -975,18 +975,18 @@ section {
 .scroll-nav-item:not(:last-child)::after {
   content: '';
   position: absolute;
-  top: calc(50% + 5px);
+  top: calc(50% + 7px);
   left: 50%;
   transform: translateX(-50%);
   width: 1px;
-  height: 14px;
+  height: 20px;
   background: rgba(0, 0, 0, 0.18);
 }
 
 .scroll-nav-dot {
   display: block;
-  width: 7px;
-  height: 7px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.2);
   border: 1.5px solid rgba(0, 0, 0, 0.25);
