@@ -86,7 +86,8 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
       const href = item.getAttribute('href').replace('#', '');
       item.classList.toggle('active', href === active);
     });
-    document.body.classList.toggle('on-hero', active === 'hero');
+    const darkSections = ['hero', 'projects', 'contact'];
+    document.body.classList.toggle('on-dark', darkSections.includes(active));
   }
 
   window.addEventListener('scroll', updateScrollNav, { passive: true });

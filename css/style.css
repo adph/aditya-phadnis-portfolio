@@ -1030,19 +1030,19 @@ section {
 }
 
 /* On hero section, flip dot color to white */
-body.on-hero .scroll-nav-item:not(:last-child)::after {
+body.on-dark .scroll-nav-item:not(:last-child)::after {
   background: rgba(255, 255, 255, 0.3);
 }
-body.on-hero .scroll-nav-dot {
+body.on-dark .scroll-nav-dot {
   background: rgba(255,255,255,0.35);
   border-color: rgba(255,255,255,0.5);
 }
-body.on-hero .scroll-nav-item:hover .scroll-nav-dot,
-body.on-hero .scroll-nav-item.active .scroll-nav-dot {
+body.on-dark .scroll-nav-item:hover .scroll-nav-dot,
+body.on-dark .scroll-nav-item.active .scroll-nav-dot {
   background: #fff;
   border-color: #fff;
 }
-body.on-hero .scroll-nav-item::before {
+body.on-dark .scroll-nav-item::before {
   color: #fff;
   background: rgba(10, 10, 10, 0.45);
   border-color: rgba(255,255,255,0.15);
