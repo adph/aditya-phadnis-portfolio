@@ -1,5 +1,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* All Syncopate text uppercased globally */
+.nav-name,
+.nav-logo,
+.hero-label,
+.hero-name,
+.hero-title,
+.section-label,
+.section-title,
+.skill-title,
+.project-number,
+.copy-btn,
+.scroll-nav-item::before {
+  text-transform: uppercase;
+}
+
 :root {
   --yellow: #FFDE85;
   --gradient: linear-gradient(45deg, #EB3349 0%, #F66945 100%);
